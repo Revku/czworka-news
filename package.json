@@ -12,9 +12,13 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "dotenv": "^16.0.3",
     "gatsby": "^4.24.5",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.24.0",
@@ -26,5 +30,31 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "sass": "^1.55.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-webpack-plugin": "^3.2.0",
+    "gatsby-plugin-eslint": "^4.0.2",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "2.7.1",
+    "stylelint": "^14.14.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard-scss": "^6.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --config .prettierrc --write",
+      "eslint --fix",
+      "stylelint --fix"
+    ]
   }
 }
