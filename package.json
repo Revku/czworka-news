@@ -43,6 +43,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-webpack-plugin": "^3.2.0",
     "gatsby-plugin-eslint": "^4.0.2",
+    "gatsby-plugin-root-import": "^2.0.8",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "2.7.1",
@@ -53,7 +54,9 @@
   "lint-staged": {
     "*.js": [
       "prettier --config .prettierrc --write",
-      "eslint --fix",
+      "eslint --fix"
+    ],
+    "*.scss": [
       "stylelint --fix"
     ]
   }
