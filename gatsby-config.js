@@ -17,7 +17,10 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `czworka-news`,
+    title: `Czwórka News`,
+    description: `Czwórka News`,
+    twitterUsername: `@author`,
+    image: `/gatsby-icon.png`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [

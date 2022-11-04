@@ -22,8 +22,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": ["src"],
-        "extensions": ["*.js"]
+        "paths": ["src"]
       }
     }
   }
