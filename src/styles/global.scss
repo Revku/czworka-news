@@ -1,0 +1,16 @@
+@import 'styles/theme';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $primary-font;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $white;
+  color: $black;
+}
