@@ -1,0 +1,17 @@
+@import 'styles/theme';
+
+.button {
+  color: $black;
+  background-color: $primary;
+  padding: 12px 45px;
+  border: none;
+  border-radius: 10px;
+  font-size: 17;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.5s;
+
+  &:hover {
+    background-color: $hover;
+  }
+}
