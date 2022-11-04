@@ -12,7 +12,7 @@ const gatsbyRequiredRules = path.join(
 );
 
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env`,
 });
 
 module.exports = {
@@ -43,6 +43,20 @@ module.exports = {
         path: './src/images/',
       },
       __key: 'images',
+    },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        // Arbitrary name for the remote schema Query type
+        typeName: 'hygraph',
+        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+        fieldName: 'hygraph',
+        // Url to query from
+        url: process.env.CMS_API_URL,
+        headers: {
+          Authorization: `Bearer ${process.env.CMS_API_KEY}`,
+        },
+      },
     },
     {
       resolve: 'gatsby-plugin-eslint',
