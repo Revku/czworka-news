@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import useSiteMetadata from 'hooks/use-site-metadata';
 
-const SEO = ({ title, description, pathname, children }) => {
+const SEO = ({ title, description, pathname }) => {
   const {
     title: defaultTitle,
     description: defaultDescription,
@@ -30,19 +30,19 @@ const SEO = ({ title, description, pathname, children }) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
-      {children}
     </>
   );
 };
 
 SEO.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  pathname: PropTypes.string.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
+  description: PropTypes.string,
+  pathname: PropTypes.string,
+};
+
+SEO.defaultProps = {
+  description: '',
+  pathname: '',
 };
 
 export default SEO;
