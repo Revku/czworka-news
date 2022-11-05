@@ -1,0 +1,28 @@
+@import 'styles/theme';
+
+.heading {
+  font-size: 27px;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    width: 100px;
+    height: 120%;
+    z-index: -1;
+    background-color: $primary;
+    position: absolute;
+    top: 0;
+    left: -30px;
+  }
+}
+
+@media (min-width: 700px) {
+  .heading {
+    font-size: 35px;
+
+    &::before {
+      width: 130px;
+    }
+  }
+}
