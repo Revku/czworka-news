@@ -4,7 +4,7 @@ import * as styles from './Button.module.scss';
 
 const Button = ({ action, children }) => {
   return (
-    <button className={styles.button} onClick={action} type="button">
+    <button className={styles.button} onClick={() => action()} type="button">
       {children}
     </button>
   );

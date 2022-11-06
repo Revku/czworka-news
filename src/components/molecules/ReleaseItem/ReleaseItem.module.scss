@@ -1,0 +1,39 @@
+@import 'styles/theme';
+
+.wrapper {
+  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  background-color: $gray;
+  cursor: pointer;
+  text-decoration: none;
+  color: $black;
+}
+
+.name {
+  width: 70%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.year {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  padding: 10px 30px;
+  background-color: $primary;
+  border-radius: 10px 0 0 10px;
+}
+
+@media (max-width: 850px) {
+  .wrapper {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 100%;
+  }
+}

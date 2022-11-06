@@ -1,0 +1,14 @@
+@import 'styles/theme';
+
+.wrapper {
+  margin-top: 80px;
+}
+
+.input {
+  padding: 12px;
+  background-color: $gray;
+  border: none;
+  border-radius: 10px;
+  width: 400px;
+  margin-right: 10px;
+}
