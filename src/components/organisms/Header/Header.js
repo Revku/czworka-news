@@ -1,4 +1,7 @@
 import React from 'react';
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { motion } from 'framer-motion';
 
 import Navigation from 'components/molecules/Navigation/Navigation';
 import Button from 'components/atoms/Button/Button';
@@ -6,6 +9,11 @@ import arrowIcon from 'images/arrowIcon.svg';
 import * as styles from './Header.module.scss';
 
 const Header = () => {
+  gsap.registerPlugin(ScrollToPlugin);
+  const handleClick = () => {
+    gsap.to(window, { duration: 1, scrollTo: '#releases' });
+  };
+
   return (
     <div className={styles.wrapper}>
       <div>
@@ -22,10 +30,16 @@ const Header = () => {
           laoreet. At condimentum mattis adipiscing nisi, felis sit. Purus nam
           et tempor eros diam tortor gravida et molestie.
         </p>
-        <Button>Czytaj online</Button>
+        <Button action={handleClick}>Czytaj online</Button>
       </div>
       <div className={styles.arrowWrapper}>
-        <img src={arrowIcon} alt="Strzałka w dół" />
+        <motion.img
+          role="presentation"
+          whileHover={{ y: 5 }}
+          onClick={handleClick}
+          src={arrowIcon}
+          alt="Strzałka w dół"
+        />
       </div>
     </div>
   );
