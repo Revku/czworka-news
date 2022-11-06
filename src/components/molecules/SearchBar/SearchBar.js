@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from 'components/atoms/Button/Button';
+// import Button from 'components/atoms/Button/Button';
 import * as styles from './Searchbar.module.scss';
 
-const SearchBar = ({ search, setSearchQuery, searchQuery, onKeyPress }) => {
+const SearchBar = ({ searchQuery, handleChange }) => {
   return (
     <div className={styles.wrapper}>
       <input
@@ -11,20 +11,19 @@ const SearchBar = ({ search, setSearchQuery, searchQuery, onKeyPress }) => {
         id="query"
         type="text"
         value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        onKeyDown={onKeyPress}
+        onChange={(e) => handleChange(e.target.value)}
         placeholder="Szukaj..."
       />
-      <Button action={() => search(searchQuery)}>Szukaj</Button>
+      {/* <Button action={() => search(searchQuery)}>Szukaj</Button> */}
     </div>
   );
 };
 
 SearchBar.propTypes = {
-  setSearchQuery: PropTypes.func.isRequired,
-  onKeyPress: PropTypes.func.isRequired,
+  // setSearchQuery: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
   searchQuery: PropTypes.string.isRequired,
-  search: PropTypes.func.isRequired,
+  // search: PropTypes.func.isRequired,
 };
 
 export default SearchBar;

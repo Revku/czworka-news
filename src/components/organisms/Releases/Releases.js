@@ -28,10 +28,9 @@ const Releases = () => {
     setData(newItems);
   };
 
-  const handleKeyPress = (event) => {
-    if (event.key === 'Enter') {
-      search(searchQuery);
-    }
+  const handleKeyPress = (query) => {
+    setSearchQuery(query);
+    search(query);
   };
 
   return (
@@ -42,7 +41,7 @@ const Releases = () => {
         search={search}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
-        onKeyPress={handleKeyPress}
+        handleChange={handleKeyPress}
       />
 
       <div className={styles.content}>
