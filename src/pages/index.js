@@ -5,6 +5,7 @@ import Header from 'components/organisms/Header/Header';
 import Releases from 'components/organisms/Releases/Releases';
 import Team from 'components/organisms/Team/Team';
 import Contact from 'components/organisms/Contact/Contact';
+import Footer from 'components/organisms/Footer/Footer';
 
 const IndexPage = () => {
   return (
@@ -13,6 +14,7 @@ const IndexPage = () => {
       <Releases />
       <Team />
       <Contact />
+      <Footer />
     </MainTemplate>
   );
 };

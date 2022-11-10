@@ -4,11 +4,12 @@
   font-size: 27px;
   position: relative;
   z-index: 2;
+  text-align: left;
 
   &::before {
     content: '';
     width: 100px;
-    height: 120%;
+    height: 40px;
     z-index: -1;
     background-color: $primary;
     position: absolute;
@@ -23,6 +24,7 @@
 
     &::before {
       width: 130px;
+      height: 60px;
     }
   }
 }

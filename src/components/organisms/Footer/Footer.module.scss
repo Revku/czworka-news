@@ -1,0 +1,23 @@
+@import 'styles/theme';
+
+.wrapper {
+  padding: 80px 30px;
+  background-color: $dark;
+  color: $text;
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 30px;
+}
+
+.author {
+  color: $text;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $primary;
+  }
+}
