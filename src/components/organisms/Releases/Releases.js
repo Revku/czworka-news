@@ -34,7 +34,7 @@ const Releases = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="releases">
       <Heading>Czytaj online</Heading>
 
       <SearchBar

@@ -27,6 +27,16 @@
   color: $primary;
 }
 
+.content {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
 @media (min-width: 800px) {
   .title {
     font-size: 35px;
