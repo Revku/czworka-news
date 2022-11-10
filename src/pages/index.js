@@ -4,6 +4,7 @@ import SEO from 'components/SEO';
 import Header from 'components/organisms/Header/Header';
 import Releases from 'components/organisms/Releases/Releases';
 import Team from 'components/organisms/Team/Team';
+import Contact from 'components/organisms/Contact/Contact';
 
 const IndexPage = () => {
   return (
@@ -11,6 +12,7 @@ const IndexPage = () => {
       <Header />
       <Releases />
       <Team />
+      <Contact />
     </MainTemplate>
   );
 };

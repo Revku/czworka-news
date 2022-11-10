@@ -1,0 +1,48 @@
+@import 'styles/theme';
+
+.wrapper {
+  width: 100%;
+  padding: 100px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.field {
+  max-width: 700px;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  background-color: $gray;
+  padding: 18px;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+
+  &:focus {
+    outline: 1px solid $black;
+  }
+}
+
+.buttons {
+  margin-top: 30px;
+}
