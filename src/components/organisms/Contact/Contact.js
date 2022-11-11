@@ -8,7 +8,19 @@ const Contact = () => {
     <div className={styles.wrapper}>
       <Heading>Skontaktuj się z nami</Heading>
 
-      <div className={styles.form}>
+      <form
+        id="contactform"
+        action="https://formsubmit.io/send/1fb9e085-7529-4dae-a074-0180d8b63366"
+        method="POST"
+        className={styles.form}
+      >
+        <input
+          name="_redirect"
+          type="hidden"
+          id="name"
+          value="http://localhost:8000/thanks"
+        />
+
         <div className={styles.field}>
           <label htmlFor="name" className={styles.label}>
             Twoje imię
@@ -52,9 +64,9 @@ const Contact = () => {
           />
         </div>
         <div className={styles.buttons}>
-          <Button>Wyślij wiadomość</Button>
+          <Button isSubmit>Wyślij wiadomość</Button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
