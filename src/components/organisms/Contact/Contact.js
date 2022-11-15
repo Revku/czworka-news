@@ -1,68 +1,119 @@
+import React from 'react';
 import Button from 'components/atoms/Button/Button';
 import Heading from 'components/atoms/Heading/Heading';
-import React from 'react';
+import FormField from 'components/molecules/FormField/FormField';
 import * as styles from './Contact.module.scss';
 
 const Contact = () => {
+  const [email, setEmail] = React.useState('');
+  const [name, setName] = React.useState('');
+  const [message, setMessage] = React.useState('');
+  const [errors, setErrors] = React.useState({});
+
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => `${encodeURIComponent(key)} = ${encodeURIComponent(data[key])}`
+      )
+      .join('&');
+  };
+
+  const validateForm = () => {
+    setErrors({});
+    const newErrors = {};
+    let errorsCount = 0;
+
+    if (!email) {
+      newErrors.email = 'Podaj adres e-mail!';
+      errorsCount += 1;
+    }
+
+    if (!name) {
+      newErrors.name = 'Podaj swoje imię!';
+      errorsCount += 1;
+    }
+
+    if (!message) {
+      newErrors.message = 'Podaj treść wiadomości!';
+      errorsCount += 1;
+    }
+
+    setErrors(newErrors);
+
+    if (errorsCount === 0) {
+      return true;
+    }
+
+    return false;
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (validateForm() === false) {
+      return 0;
+    }
+
+    const formData = {
+      'E-Mail': email,
+      Name: name,
+      Message: message,
+    };
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'Kontakt', ...formData }),
+    })
+      .then(() => {
+        location.href = '/thanks';
+      })
+      .catch(() => {
+        location.href = '/form-error';
+      });
+  };
+
   return (
     <div className={styles.wrapper}>
       <Heading>Skontaktuj się z nami</Heading>
 
       <form
         id="contactform"
-        action="https://formsubmit.io/send/1fb9e085-7529-4dae-a074-0180d8b63366"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+        name="Kontakt"
         method="POST"
         className={styles.form}
+        onSubmit={handleSubmit}
       >
-        <input
-          name="_redirect"
-          type="hidden"
-          id="name"
-          value="http://localhost:8000/thanks"
+        <FormField
+          label="Twoje Imię"
+          name="Imię"
+          onChange={setName}
+          value={name}
+          placeholder="Imię"
+          error={errors.name}
         />
 
-        <div className={styles.field}>
-          <label htmlFor="name" className={styles.label}>
-            Twoje imię
-          </label>
-          <input
-            type="text"
-            className={styles.input}
-            placeholder="Imię"
-            id="name"
-            name="Imie"
-            autoComplete="off"
-          />
-        </div>
+        <FormField
+          label="Adres E-Mail"
+          name="E-Mail"
+          onChange={setEmail}
+          value={email}
+          placeholder="E-Mail"
+          error={errors.email}
+        />
 
-        <div className={styles.field}>
-          <label htmlFor="email" className={styles.label}>
-            Adres E-mail
-          </label>
-          <input
-            type="text"
-            className={styles.input}
-            placeholder="Adres E-Mail"
-            id="email"
-            name="E-Mail"
-            autoComplete="off"
-          />
-        </div>
+        <FormField
+          label="Wiadomość"
+          name="Wiadomość"
+          onChange={setMessage}
+          value={message}
+          placeholder="Twoja wiadomość"
+          isTextArea
+          error={errors.message}
+        />
 
-        <div className={styles.field}>
-          <label htmlFor="message" className={styles.label}>
-            Wiadomość
-          </label>
-          <textarea
-            type="text"
-            rows={9}
-            className={styles.input}
-            placeholder="Twoja wiadomość"
-            id="message"
-            name="Wiadomość"
-            autoComplete="off"
-          />
-        </div>
         <div className={styles.buttons}>
           <Button isSubmit>Wyślij wiadomość</Button>
         </div>
