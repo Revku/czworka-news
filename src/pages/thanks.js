@@ -1,6 +1,7 @@
 import React from 'react';
 import * as styles from 'styles/custom.module.scss';
 import logo from 'images/logo.svg';
+import SEO from 'components/SEO';
 import Button from 'components/atoms/Button/Button';
 import { Link } from 'gatsby';
 
@@ -20,3 +21,7 @@ const ThanksPage = () => {
 };
 
 export default ThanksPage;
+
+export const Head = () => (
+  <SEO title="Dziękujemy za przesłanie wiadomości! - Czwórka News" />
+);

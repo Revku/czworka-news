@@ -1,10 +1,11 @@
 import React from 'react';
 import * as styles from 'styles/custom.module.scss';
+import SEO from 'components/SEO';
 import logo from 'images/logo.svg';
 import Button from 'components/atoms/Button/Button';
 import { Link } from 'gatsby';
 
-const ThanksPage = () => {
+const FormErrorPage = () => {
   return (
     <div className={styles.wrapper}>
       <img src={logo} alt="Czwórka News Logo" />
@@ -20,4 +21,5 @@ const ThanksPage = () => {
   );
 };
 
-export default ThanksPage;
+export default FormErrorPage;
+export const Head = () => <SEO title="Wystąpił błąd! - Czwórka News" />;
