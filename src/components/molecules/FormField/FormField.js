@@ -8,7 +8,7 @@ const FormField = ({
   onChange,
   value,
   placeholder = label,
-  type = 'text',
+  type,
   isTextArea = false,
   error,
 }) => {
@@ -52,13 +52,15 @@ FormField.propTypes = {
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  isTextArea: PropTypes.bool.isRequired,
+  type: PropTypes.string,
+  isTextArea: PropTypes.bool,
   error: PropTypes.string,
 };
 
 FormField.defaultProps = {
   error: null,
+  isTextArea: false,
+  type: 'text',
 };
 
 export default FormField;

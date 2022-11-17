@@ -13,11 +13,10 @@ const Contact = () => {
   const encode = (data) => {
     return Object.keys(data)
       .map(
-        (key) => `${encodeURIComponent(key)} = ${encodeURIComponent(data[key])}`
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
       )
       .join('&');
   };
-
   const validateForm = () => {
     setErrors({});
     const newErrors = {};
@@ -55,9 +54,9 @@ const Contact = () => {
     }
 
     const formData = {
-      'E-Mail': email,
-      Name: name,
-      Message: message,
+      Mail: email,
+      Imie: name,
+      Wiadomosc: message,
     };
 
     fetch('/', {
@@ -78,17 +77,18 @@ const Contact = () => {
       <Heading>Skontaktuj się z nami</Heading>
 
       <form
-        id="contactform"
-        netlify-honeypot="bot-field"
-        data-netlify="true"
         name="Kontakt"
         method="POST"
+        action="/"
         className={styles.form}
-        onSubmit={handleSubmit}
+        onSubmit={(event) => handleSubmit(event)}
+        data-netlify="true"
       >
+        <input type="hidden" name="form-name" value="Kontakt" />
+
         <FormField
           label="Twoje Imię"
-          name="Imię"
+          name="Imie"
           onChange={setName}
           value={name}
           placeholder="Imię"
@@ -97,7 +97,7 @@ const Contact = () => {
 
         <FormField
           label="Adres E-Mail"
-          name="E-Mail"
+          name="Mail"
           onChange={setEmail}
           value={email}
           placeholder="E-Mail"
@@ -106,7 +106,7 @@ const Contact = () => {
 
         <FormField
           label="Wiadomość"
-          name="Wiadomość"
+          name="Wiadomosc"
           onChange={setMessage}
           value={message}
           placeholder="Twoja wiadomość"
