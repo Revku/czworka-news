@@ -26,14 +26,13 @@ const Header = () => {
           <span className={styles.mark}> Czwórką News Online</span>!
         </h1>
         <p className={styles.paragraph}>
-          W naszej szkole wydawana jest gazetka szkolna &quot;Czwórka
-          News&quot;. Gazetka pojawia się cyklicznie przez cały rok szkolny.
-          Opiekunem gazetki szkolnej jest Pani Wioletta Szymonik. Materiały w
-          gazetce redagują uczniowie uczęszczający na zajęcia redakcyjne.
-          Umieszczają w niej informacje z życia szkoły, konkursy, wywiady oraz
-          relacje z imprez i świąt w szkole. Rozwijają w ten sposób swoje
-          zainteresowania, uczą się redagowania tekstów, współpracy w zespole i
-          odpowiedzialności za powierzone zadania.
+          Gazetka szkolna &quot;Czwórka News&quot; pojawia się cyklicznie przez
+          cały rok szkolny. Materiały w gazetce redagują uczniowie uczęszczający
+          na zajęcia redakcyjne pod opieką pani Wioletty Szymonik. Umieszczają w
+          niej informacje z życia szkoły, konkursy, wywiady oraz relacje z
+          imprez i świąt w szkole. Rozwijają w ten sposób swoje zainteresowania,
+          uczą się redagowania tekstów, współpracy w zespole i odpowiedzialności
+          za powierzone zadania.
         </p>
         <Button action={handleClick}>Czytaj online</Button>
       </div>
