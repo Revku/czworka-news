@@ -5,6 +5,9 @@ import * as styles from './Searchbar.module.scss';
 const SearchBar = ({ searchQuery, handleChange }) => {
   return (
     <div className={styles.wrapper}>
+      <label htmlFor="query" className={styles.label}>
+        Chcesz wyszukać konkretny numer?
+      </label>
       <input
         className={styles.input}
         id="query"
