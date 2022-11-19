@@ -48,19 +48,17 @@ const Releases = () => {
         {data.length === 0 ? (
           <p>Nie znaleziono numerów.</p>
         ) : (
-          data
-            .sort((a, b) => new Date(b.date) - new Date(a.date))
-            .map((item) => {
-              return (
-                <ReleaseItem
-                  key={item.id}
-                  name={item.releaseName}
-                  year={item.year.year}
-                  url={item.pdfFile.url}
-                  color={item.year.backgroundColor.hex}
-                />
-              );
-            })
+          data.map((item) => {
+            return (
+              <ReleaseItem
+                key={item.id}
+                name={item.releaseName}
+                year={item.year.year}
+                url={item.pdfFile.url}
+                color={item.year.backgroundColor.hex}
+              />
+            );
+          })
         )}
       </div>
     </div>
