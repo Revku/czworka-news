@@ -29,6 +29,7 @@
 .about {
   font-size: 13.5px;
   text-align: center;
+  padding: 15px 0;
 }
 
 .role {
@@ -44,5 +45,6 @@
 @media (max-width: 860px) {
   .wrapper {
     width: 100%;
+    height: auto;
   }
 }
