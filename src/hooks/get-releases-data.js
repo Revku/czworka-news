@@ -4,7 +4,7 @@ const getReleasesData = () => {
   const data = useStaticQuery(graphql`
     query {
       hygraph {
-        releases {
+        releases(first: 200, orderBy: date_DESC) {
           year {
             textColor {
               hex
