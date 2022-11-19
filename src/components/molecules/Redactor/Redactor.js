@@ -20,7 +20,7 @@ const Redactor = ({
         src={photo}
         alt={`Zdjęcie: ${firstName} ${lastName}`}
       />
-      <div>
+      <div className={styles.heading}>
         <h2 className={styles.title}>
           {firstName} {lastName}
         </h2>

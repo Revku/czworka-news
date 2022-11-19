@@ -14,6 +14,13 @@
   border-radius: 50%;
 }
 
+.heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .title {
   font-size: 22px;
   font-weight: 400;
@@ -30,6 +37,8 @@
   margin-top: 10px;
   text-align: center;
   border-radius: 50px;
+  display: block;
+  width: 200px;
 }
 
 @media (max-width: 860px) {
