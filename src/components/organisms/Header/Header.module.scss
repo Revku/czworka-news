@@ -10,6 +10,12 @@
   grid-template-rows: 130px 1fr 70px;
 }
 
+.nav,
+.arrowWrapper,
+.content {
+  opacity: 0;
+}
+
 .content {
   padding: 30px;
   display: flex;

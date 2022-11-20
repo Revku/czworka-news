@@ -23,6 +23,13 @@
   color: $text;
 }
 
+.teamContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .mark {
   color: $primary;
 }
