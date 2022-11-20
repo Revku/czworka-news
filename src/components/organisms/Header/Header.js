@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <div className={styles.wrapper}>
-      <div ref={navRef}>
+      <div ref={navRef} className={styles.nav}>
         <Navigation />
       </div>
       <div className={styles.content} ref={contentRef}>
