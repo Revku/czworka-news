@@ -17,11 +17,11 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Czwórka News`,
-    description: `Czwórka News`,
-    twitterUsername: `@author`,
-    image: `/gatsby-icon.png`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Czwórka News - Oficjalna strona redakcji`,
+    description: `Gazetka szkolna "Czwórka News" pojawia się cyklicznie przez cały rok szkolny. Materiały w gazetce redagują uczniowie uczęszczający na zajęcia redakcyjne pod opieką pani Wioletty Szymonik. Umieszczają w niej informacje z życia szkoły, konkursy, wywiady oraz relacje z imprez i świąt w szkole. Rozwijają w ten sposób swoje zainteresowania, uczą się redagowania tekstów, współpracy w zespole i odpowiedzialności za powierzone zadania.`,
+    twitterUsername: `@czworkanews`,
+    image: `/icon.png`,
+    siteUrl: `https://news.sp4lebork.pl`,
   },
   plugins: [
     'gatsby-plugin-sass',
