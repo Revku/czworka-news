@@ -9,17 +9,39 @@ import arrowIcon from 'images/arrowIcon.svg';
 import * as styles from './Header.module.scss';
 
 const Header = () => {
+  const navRef = React.useRef('');
+  const contentRef = React.useRef('');
+  const arrowRef = React.useRef('');
+
   gsap.registerPlugin(ScrollToPlugin);
   const handleClick = () => {
     gsap.to(window, { duration: 1, scrollTo: '#releases' });
   };
 
+  React.useEffect(() => {
+    gsap.fromTo(
+      navRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5, delay: 0.5 }
+    );
+    gsap.fromTo(
+      contentRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5, delay: 0.8 }
+    );
+    gsap.fromTo(
+      arrowRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5, delay: 1 }
+    );
+  }, []);
+
   return (
     <div className={styles.wrapper}>
-      <div>
+      <div ref={navRef}>
         <Navigation />
       </div>
-      <div className={styles.content}>
+      <div className={styles.content} ref={contentRef}>
         <h1 className={styles.title}>
           Bądź na bieżąco ze wszystkimi
           <br /> wydarzeniami z
@@ -36,7 +58,7 @@ const Header = () => {
         </p>
         <Button action={handleClick}>Czytaj online</Button>
       </div>
-      <div className={styles.arrowWrapper}>
+      <div className={styles.arrowWrapper} ref={arrowRef}>
         <motion.img
           role="presentation"
           whileHover={{ y: 5 }}
