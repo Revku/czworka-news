@@ -22,17 +22,17 @@ const Header = () => {
     gsap.fromTo(
       navRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 1.5, delay: 0.5 }
+      { opacity: 1, duration: 1.5, delay: 0.1 }
     );
     gsap.fromTo(
       contentRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 1.5, delay: 0.8 }
+      { opacity: 1, duration: 1.5, delay: 0.3 }
     );
     gsap.fromTo(
       arrowRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 1.5, delay: 1 }
+      { opacity: 1, duration: 1.5, delay: 0.5 }
     );
   }, []);
 
