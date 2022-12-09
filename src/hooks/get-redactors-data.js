@@ -4,7 +4,7 @@ const getRedactorsData = () => {
   const data = useStaticQuery(graphql`
     query {
       hygraph {
-        redactors {
+        redactors(first: 200) {
           role
           roleColor {
             hex
