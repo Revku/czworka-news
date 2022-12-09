@@ -15,7 +15,7 @@ const FormField = ({
   return (
     <div className={styles.field}>
       <label htmlFor={name} className={styles.label}>
-        Twoje imię
+        {label}
       </label>
       {isTextArea ? (
         <textarea
