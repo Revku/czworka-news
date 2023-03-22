@@ -60,13 +60,13 @@ const IndexPage = () => {
   return (
     <MainTemplate>
       <Header />
-      <div ref={releasesRef} id="releases">
+      <div ref={releasesRef} id="gazetki">
         <Releases />
       </div>
-      <div ref={teamRef}>
+      <div ref={teamRef} id="zespol">
         <Team />
       </div>
-      <div ref={contactRef}>
+      <div ref={contactRef} id="kontakt">
         <Contact />
       </div>
       <Footer />
