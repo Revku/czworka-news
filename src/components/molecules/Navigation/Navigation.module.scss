@@ -1,9 +1,28 @@
 .wrapper {
   padding: 50px 30px;
+  display: flex;
+  justify-content: space-around;
 }
 
-@media (min-width: 500px) {
+.item {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.5s;
+  display: inline-block;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 600px) {
+  .item {
+    display: none;
+  }
+
   .wrapper {
-    padding: 50px;
+    display: block;
   }
 }

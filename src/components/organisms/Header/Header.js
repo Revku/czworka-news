@@ -15,7 +15,7 @@ const Header = () => {
 
   gsap.registerPlugin(ScrollToPlugin);
   const handleClick = () => {
-    gsap.to(window, { duration: 1, scrollTo: '#releases' });
+    gsap.to(window, { duration: 1, scrollTo: '#gazetki' });
   };
 
   React.useEffect(() => {
