@@ -24,7 +24,7 @@
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.24.0",
     "gatsby-plugin-sass": "^5.24.0",
-    "gatsby-plugin-sharp": "^4.24.0",
+    "gatsby-plugin-sharp": "^4.25.1",
     "gatsby-plugin-sitemap": "^5.24.0",
     "gatsby-source-filesystem": "^4.24.0",
     "gatsby-source-graphql": "^4.24.0",
