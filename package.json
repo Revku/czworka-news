@@ -20,7 +20,7 @@
     "@babel/eslint-parser": "^7.19.1",
     "dotenv": "^16.0.3",
     "framer-motion": "^7.6.4",
-    "gatsby": "^4.25.7",
+    "gatsby": "^5.10.0",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-manifest": "^4.24.0",
     "gatsby-plugin-sass": "^5.24.0",
