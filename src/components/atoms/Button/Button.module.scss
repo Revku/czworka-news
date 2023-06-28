@@ -15,3 +15,11 @@
     background-color: $hover;
   }
 }
+
+.disabledButton {
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: $primary;
+  }
+}

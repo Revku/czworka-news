@@ -28,6 +28,7 @@ const FormField = ({
           onChange={(event) => onChange(event.target.value)}
           autoComplete="off"
           rows={10}
+          disabled
         />
       ) : (
         <input
@@ -39,6 +40,7 @@ const FormField = ({
           value={value}
           onChange={(event) => onChange(event.target.value)}
           autoComplete="off"
+          disabled
         />
       )}
       {error && <p className={styles.error}>{error}</p>}

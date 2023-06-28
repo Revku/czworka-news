@@ -114,8 +114,14 @@ const Contact = () => {
           error={errors.message}
         />
 
+        <p>
+          Formularz chwilowo nie zbiera odpowiedzi. Przepraszamy za utrudnienia.
+        </p>
+
         <div className={styles.buttons}>
-          <Button isSubmit>Wyślij wiadomość</Button>
+          <Button isSubmit isDisabled>
+            Wyślij wiadomość
+          </Button>
         </div>
       </form>
     </div>

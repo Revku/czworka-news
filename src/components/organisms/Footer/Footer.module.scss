@@ -5,6 +5,10 @@
   background-color: $dark;
   color: $text;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
@@ -20,4 +24,10 @@
   &:hover {
     color: $primary;
   }
+}
+
+.paragraph {
+  max-width: 600px;
+  margin-bottom: 30px;
+  font-size: 15px;
 }

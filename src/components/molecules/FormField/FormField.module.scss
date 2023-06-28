@@ -26,6 +26,7 @@
   border-radius: 10px;
   border: none;
   resize: none;
+  cursor: not-allowed;
 
   &:focus {
     outline: 1px solid $black;

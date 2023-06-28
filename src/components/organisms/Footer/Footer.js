@@ -6,7 +6,10 @@ const Footer = () => {
   return (
     <div className={styles.wrapper}>
       <img src={logo} alt="Czwórka News Logo" className={styles.logo} />
-      <p>Czwórka News ©️ 2022 | Wszelkie prawa zastrzeżone</p>
+      <p className={styles.paragraph}>
+        Czwórka News to bezpłatny serwis, na którym możesz czytać nowe wydania
+        gazetki szkolnej stworzonej przez uczniów.
+      </p>
       <p>
         Wykonanie:{' '}
         <a
